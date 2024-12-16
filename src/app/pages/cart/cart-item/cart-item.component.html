@@ -1,0 +1,11 @@
+<div class="bg-white shadow-md border rounded-xl p-6 flex gap-10 item-center">
+    <img [src]="item().image" class="w-[50px] h-[100px] object-contain" />
+    <div class="flex flex-col">
+        <span class="text-bold font-bold">{{item().title}}</span>
+        <span class="text-sm">{{item().description}}</span>
+        <span class="text-sm">{{' $ ' + item().price + '.00'}}</span>
+    </div>
+    <div class="flex-1">
+        <app-button label="Remove" (btnClicked)="cartService.removeItems(item().id)" />
+    </div>
+</div>

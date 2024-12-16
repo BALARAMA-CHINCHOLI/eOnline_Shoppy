@@ -1,0 +1,7 @@
+
+<div class="bg-slate-100 px-3 py-2 shadow-md flex justify-between text-center">
+
+    <button class="text-xl" routerLink="/">My Store</button>
+
+    <app-primary-button [label]="'cart (' + cartService.cart().length + ')'" routerLink="/cart" />
+</div>
